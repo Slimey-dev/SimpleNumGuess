@@ -17,6 +17,7 @@ def main():
 
           For example, if you the secret number was 248 and your guess was 843 cluess would be Fermi Pico.'''.format(num_digits))
 
+    # main game loop
     while True:
         secretNum = getSecretNum()
         print('I have thought up a number.')
@@ -45,6 +46,7 @@ def main():
         print('Thanks for playing!')
 
 
+# generating a random secret number
 def getSecretNum():
     numbers = list('0123456789')
     random.shuffle(numbers)
@@ -52,6 +54,7 @@ def getSecretNum():
     return ''.join(str(numbers[i]) for i in range(num_digits))
 
 
+# getting clues about our tips
 def getClues(guess, secretNum):
     if guess == secretNum:
         return 'You got it!'
