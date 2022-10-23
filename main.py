@@ -6,22 +6,22 @@ max_guesses = 10
 
 
 def main():
-    print('''Bagels is a deductive logic game.
+    print(f'''Bagels is a deductive logic game.
 
-          I am thinking of a {}-digit number with no repeated digits.
+          I am thinking of a {num_digits}-digit number with no repeated digits.
           Try guessing what it is.
           When I say:  That means:
             Pico         One digit is correct but in the wrong position.
             Fermi        One digit is correct but in the right position.
             Bagels       No digit is correct.
 
-          For example, if you the secret number was 248 and your guess was 843 cluess would be Fermi Pico.'''.format(num_digits))
+          For example, if you the secret number was 248 and your guess was 843 cluess would be Fermi Pico.''')
 
     # main game loop
     while True:
         secretNum = getSecretNum()
         print('I have thought up a number.')
-        print(f'You gave {max_guesses}-guesses to get it.')
+        print(f'You have {max_guesses}-guesses to get it.')
 
         numGuesses = 1
         while numGuesses <= max_guesses:
